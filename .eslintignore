@@ -1,0 +1,16 @@
+node_modules
+mochawesome-reports
+mochawesome-report
+coverage
+.nyc_output
+.idea
+._.DS_Store
+.DS_Store
+*.log
+*.ipc
+*.pid
+dump.rdb
+api-server/plugins/*
+.vscode/
+package-lock.json
+apidoc

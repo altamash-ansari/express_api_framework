@@ -1,0 +1,54 @@
+{
+  "name": "express_api_framework",
+  "version": "1.0.0",
+  "description": "API framework based on expressjs",
+  "main": "server.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint .",
+    "test": "node test.js",
+    "cover": "./node_modules/.bin/nyc npm test",
+    "postinstall": "./node_modules/.bin/gulp npm-install-packages",
+    "kill": "./node_modules/.bin/pm2 kill",
+    "status": "./node_modules/.bin/pm2 status",
+    "monit": "./node_modules/.bin/pm2 monit",
+    "logs": "./node_modules/.bin/pm2 logs",
+    "start": "./node_modules/.bin/pm2 start api_pm2.config.js",
+    "stop": "./node_modules/.bin/pm2 stop api_pm2.config.js",
+    "restart": "./node_modules/.bin/pm2 restart api_pm2.config.js --update-env",
+    "reload": "./node_modules/.bin/pm2 reload api_pm2.config.js --update-env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altamash-ansari/express_api_framework.git"
+  },
+  "author": "Altamash Ansari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/altamash-ansari/express_api_framework/issues"
+  },
+  "homepage": "https://github.com/altamash-ansari/express_api_framework#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-cors": "^0.5.6",
+    "express": "4.16.3",
+    "gulp": "4.0.0",
+    "gulp-install": "0.6.0",
+    "lodash": "4.17.11",
+    "nconf": "0.10.0",
+    "on-headers": "^1.0.2",
+    "pm2": "3.0.3",
+    "when": "^3.7.8",
+    "winston": "3.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "chai-as-promised": "5.2.0",
+    "chai-fuzzy": "1.6.0",
+    "eslint": "5.13.0",
+    "mocha": "5.2.0",
+    "mochawesome": "3.0.3",
+    "nock": "9.4.2",
+    "nyc": "14.0.0",
+    "supertest": "3.1.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "defaults": {
+    "debug": 3,
+    "server": {
+      "port": 9000
+    }
+  },
+  "test": {}
+}

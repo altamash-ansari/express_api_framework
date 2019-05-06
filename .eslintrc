@@ -1,0 +1,59 @@
+{
+  "env": {
+    "es6" : true,
+    "node": true
+  },
+  "extends"      : "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType" : "module"
+  },
+  "rules": {
+    "indent": ["error", 2, { 
+      "MemberExpression"  : 0,
+      "SwitchCase"        : 1,
+      "VariableDeclarator": { 
+        "var": 2, 
+        "let": 2, 
+        "const": 3 
+      }
+    }],
+    "linebreak-style"          : ["error", "unix"],
+    "space-in-parens"          : [ 0, "always" ],
+    "template-curly-spacing"   : [2, "never"],
+    "array-bracket-spacing"    : [2, "never"],
+    "object-curly-spacing"     : [2, "always"],
+    "computed-property-spacing": [2, "never" ],
+    "no-multiple-empty-lines"  : [2, {
+      "max"   : 1,
+      "maxEOF": 0,
+      "maxBOF": 0 
+    }],
+    "quotes"              : [1, "double", "avoid-escape" ],
+    "no-use-before-define": [2, {
+      "functions": false
+    }],
+    "semi"        : [2, "never"],
+    "prefer-const": 1,
+    "key-spacing" : [2, {
+      "align": "colon"
+    }]
+  },
+  "globals": {
+    "utils"      : true,
+    "app"        : true,
+    "api"        : true,
+    "describe"   : true,
+    "it"         : true,
+    "after"      : true,
+    "before"     : true,
+    "beforeEach" : true,
+    "afterEach"  : true,
+    "factories"  : true,
+    "d"          : true,
+    "generateUid": true,
+    "httpmock"   : true,
+    "expect"     : true,
+    "__locales"  : true
+  }
+}
