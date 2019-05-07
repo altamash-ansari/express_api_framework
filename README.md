@@ -65,3 +65,87 @@ API framework contain global variables and methods which can be accessed in the 
 
   5. utils // Contain helper functions
 ```
+
+# API Routes
+
+API framework has been redefined to simplify adding new routes and nested routes
+
+```
+ routes.js
+
+ module.exports = {
+  "/user": {
+    GET: function(req, res){
+      // body
+    },
+    POST: function(req, res){
+      // body
+    },
+    "/:id": {
+      GET: function(req, res){
+        // body
+      },
+      PUT: function(req, res){
+        // body
+      }
+    }  
+  }
+```
+
+## Attaching Before hook
+
+```
+module.exports = {
+  "/user": {
+    "/:id": {
+      // add before block here
+      before: function(req, res){
+        // validate user access
+      },
+      GET: function(req, res){
+        // body
+      },
+      PUT: function(req, res){
+        // body
+      }
+    }  
+  }
+```
+
+## Pre and Post hooks
+
+Pre and post hook is used to attach the hook between two services for the same routes.
+
+```
+// Service1 routes.js
+module.exports = {
+  "/user": {
+    GET: {
+      _pre: function(){
+        
+      },
+      _post: function(){
+
+      },
+      _send_: function(){
+        // to send the response to client
+      }
+    }
+  }
+}
+
+// Service2 routes.js
+module.exports = {
+  "/user": {
+    GET: {
+      _pre: function(){
+
+      },
+      _post: function(){
+
+      }
+    }
+  }
+}
+
+```

@@ -75,6 +75,7 @@ module.exports = {
          * Do not change the orders
          */
         middlewares.requestLogger,
+        middlewares.pragmaticRest,
         middlewares.validateContentType,
         bodyParser.json({
           limit: "50mb"
@@ -86,7 +87,8 @@ module.exports = {
         }),
         middlewares.handleBodyParserError,
         middlewares.cors,
-        middlewares.poweredBy
+        middlewares.poweredBy,
+        middlewares.requestParams
       ], app)
     })
     .then(function(){

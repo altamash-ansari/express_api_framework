@@ -4,6 +4,8 @@ module.exports = {
   validateContentType  : require("./validate-content-type"),
   cors                 : require("./cors"),
   poweredBy            : require("./powered-by"),
+  requestParams        : require("./request-params"),
+  pragmaticRest        : require("./pragmatic-rest"),
   handleBodyParserError: function (error, req, res, next) {
     if (error){
       if(error instanceof SyntaxError) {
